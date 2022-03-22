@@ -1,5 +1,5 @@
 # array-plugin-construct2
-Adicionei funções através do js dentro prototype js no plugin array da Scirra para a engine construct2.
+Adicionei uma nova condição através do js dentro prototype js no plugin array da Scirra para a engine construct2.
 
 Condição adicionada ao plugin:
 - (ContainsConvertLowercase):
