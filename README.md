@@ -7,6 +7,8 @@ Condição adicionada ao plugin:
 Oque faz: busca (elemento a elemento) na array convertendo cada elemento em minúsculo para verificar se o valor existe.
 Desta forma não importa a composição do valor do elemento na array, sempre retornará o valor em minúsculo facilitando expressões e comparações.
 
+Exemplo: quero localizar a palavra valor, vai localizar mesmo que a palavra estiver na array escrita Valor, vAlor, vaLor, valOr, VAlor, etc...
+
 Código usado no runtime:
 ```
 Cnds.prototype.ContainsConvertLowercase = function(val)
