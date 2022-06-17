@@ -42,7 +42,8 @@ Oque faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmet
 
 Exemplo: Tenho uma array com 3 colunas y e quero procurar pelo valor "teste" na coluna Y informada.
   
-  
+Código usado no runtime:
+```  
 		Cnds.prototype.ContainsColumnY = function(y,val)
 	{
 		if(y < this.cy && y >= 0){ //A condição irá verificar se o Y colocado é menor que a quantidade de elemento no eixo y, pois o índice começa com zero, e se o número for maior que zero para não colocar um valor negativo.
@@ -52,7 +53,7 @@ Exemplo: Tenho uma array com 3 colunas y e quero procurar pelo valor "teste" na 
 		{
 			for (z = 0; z < this.cz; z++)
 				{
-					if (this.arr[x][y][z] === val)
+					if (this.arr[x][y][z] === val) // comparação nao converte os tipos para os 2 serem iguais, entao coloquei o valor no tipo de string (texto) ou número.
 						return true;
 				}
 		}
@@ -62,3 +63,4 @@ Exemplo: Tenho uma array com 3 colunas y e quero procurar pelo valor "teste" na 
 	return false
 	}
 	};
+``` 
