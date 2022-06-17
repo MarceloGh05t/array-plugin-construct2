@@ -49,14 +49,14 @@ Código usado no runtime:
 ```  
 		Cnds.prototype.ContainsColumnY = function(y,val)
 	{
-		if(y < this.cy && y >= 0){ //A condição irá verificar se o Y colocado é menor que a quantidade de elemento no eixo y, pois o índice começa com zero, e se o número for maior que zero para não colocar um valor negativo.
+		if(y < this.cy && y >= 0){ //A condição irá verificar se o Y colocado é menor, que a quantidade de elemento no eixo y, pois o índice começa com zero, e se o número for maior, que zero para não colocar um valor negativo.
 		var x, z;
 		
 		for (x = 0; x < this.cx; x++)
 		{
 			for (z = 0; z < this.cz; z++)
 				{
-					if (this.arr[x][y][z] === val) // comparação nao converte os tipos para os 2 serem iguais, entao coloquei o valor no tipo de string (texto) ou número.
+					if (this.arr[x][y][z] === val) // comparação não converte os tipos para os 2 serem iguais, entao coloquei o valor no tipo de string (texto) ou número.
 						return true;
 				}
 		}
@@ -80,7 +80,7 @@ Código usado no runtime:
 ``` 
 Exps.prototype.IndexYOf = function (ret,x,value)
 	{
-		if(x < this.cx && x >= 0){ //the condition will check if the u placed is less than the amount of element in the x axis, because the index starts with zero, and if the number is greater than zero to not place a negative value
+		if(x < this.cx && x >= 0){ //A condição irá verificar se o x colocado é menor, que a quantidade de elemento no eixo x, pois o índice começa com zero, e se o número for maior, que zero para não colocar um valor negativo.
 
 		for (var i = 0; i < this.cy; i++)
 		{
