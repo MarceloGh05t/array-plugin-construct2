@@ -33,10 +33,12 @@ Cnds.prototype.ContainsConvertLowercase = function(val)
 		return false;
 	};
   ```
+========================
 Atualização do plugin com a condição: "Contains value column y" e a expressão:  "Index Y of".
 
 Condição adicionada ao plugin:
-- (ContainsColumnY):
+
+- Contains value column y (ContainsColumnY):
 
 O que faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmetro para a busca somente naquela coluna y. O valor procurado não tem que ser no mesmo tipo, se for string (texto) vai procurar pelo valor no tipo de string, se for numero vai procurar o valor como numero.
 
@@ -66,7 +68,8 @@ Código usado no runtime:
 ``` 
 
 Expressão adicionada ao plugin:
-- (IndexYOf):
+
+- Index Y of (IndexYOf):
 
 O que faz: vai verificar todas as colunas y de uma linha x da array, se tem o valor declarado. O valor passsado já é convertido para string para não tem problemas de valores iguais, mas tipos diferentes e retonar o valor da coluna y, que em o valor infomado naquela linha x.
 
