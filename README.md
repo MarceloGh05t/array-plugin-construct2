@@ -6,7 +6,7 @@ Adicionei uma nova condição através do js dentro prototype js no plugin array
 Condição adicionada ao plugin:
 - (ContainsConvertLowercase):
 
-Oque faz: busca (elemento a elemento) na array convertendo cada elemento em minúsculo para verificar se o valor existe.
+O que faz: busca (elemento a elemento) na array convertendo cada elemento em minúsculo para verificar se o valor existe.
 Desta forma não importa a composição do valor do elemento na array, sempre retornará o valor em minúsculo facilitando expressões e comparações.
 
 Exemplo: quero localizar a palavra valor. Vai localizar mesmo que a palavra estiver escrita na array, como: Valor, vAlor, vaLor, valOr, VAlor, etc...
@@ -38,7 +38,7 @@ Atualização do plugin com a condição: "Contains value column y" e a express�
 Condição adicionada ao plugin:
 - (ContainsColumnY):
 
-Oque faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmetro para a busca somente naquela coluna y. O valor procurado não tem que ser no mesmo tipo, se for string (texto) vai procurar pelo valor no tipo de string, se for numero vai procurar o valor como numero.
+O que faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmetro para a busca somente naquela coluna y. O valor procurado não tem que ser no mesmo tipo, se for string (texto) vai procurar pelo valor no tipo de string, se for numero vai procurar o valor como numero.
 
 Exemplo: Tenho uma array com 3 colunas y e quero procurar pelo valor "teste" na coluna Y informada.
   
@@ -63,4 +63,29 @@ Código usado no runtime:
 	return false
 	}
 	};
+``` 
+
+Expressão adicionada ao plugin:
+- (IndexYOf):
+O que faz: vai verificar todas as colunas y de uma linha x da array, se tem o valor declarado. O valor passsado já é convertido para string para não tem problemas de valores iguais, mas tipos diferentes e retonar o valor da coluna y, que em o valor infomado naquela linha x.
+
+Exemplo: IndexYOf(1,"valor_teste") vai procurar pelo "valor_teste" em todas as colunas y co x infomado, que no caso foi a linha 1.
+
+``` 
+Exps.prototype.IndexYOf = function (ret,x,value)
+	{
+		if(x < this.cx && x >= 0){ //the condition will check if the u placed is less than the amount of element in the x axis, because the index starts with zero, and if the number is greater than zero to not place a negative value
+
+		for (var i = 0; i < this.cy; i++)
+		{
+			if (this.arr[x][i][0].toString() === value.toString())
+			{
+				ret.set_int(i);
+				return;
+			}
+		}
+		}
+		ret.set_int(-1);
+	};
+
 ``` 
