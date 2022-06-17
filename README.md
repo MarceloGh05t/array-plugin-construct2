@@ -67,10 +67,12 @@ Código usado no runtime:
 
 Expressão adicionada ao plugin:
 - (IndexYOf):
+
 O que faz: vai verificar todas as colunas y de uma linha x da array, se tem o valor declarado. O valor passsado já é convertido para string para não tem problemas de valores iguais, mas tipos diferentes e retonar o valor da coluna y, que em o valor infomado naquela linha x.
 
 Exemplo: IndexYOf(1,"valor_teste") vai procurar pelo "valor_teste" em todas as colunas y co x infomado, que no caso foi a linha 1.
 
+Código usado no runtime:
 ``` 
 Exps.prototype.IndexYOf = function (ret,x,value)
 	{
