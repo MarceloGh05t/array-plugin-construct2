@@ -41,7 +41,7 @@ Condição adicionada ao plugin:
 
 - Contains value column y (ContainsColumnY):
 
-O que faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmetro para a busca somente naquela coluna y. O valor procurado não tem que ser no mesmo tipo, se for string (texto) vai procurar pelo valor no tipo de string, se for numero vai procurar o valor como numero.
+O que faz: Vai procurar na coluna y declarada, pelo valor declarado como parâmetro para a busca somente naquela coluna y. O valor procurado tem que ser no mesmo tipo do declarado, se for string (texto) vai procurar pelo valor no tipo de string, se for numero vai procurar o valor como numero.
 
 Exemplo: Tenho uma array com 3 colunas y e quero procurar pelo valor "teste" na coluna Y informada.
   
