@@ -34,6 +34,7 @@ Cnds.prototype.ContainsConvertLowercase = function(val)
 	};
   ```
 ========================
+
 Atualização do plugin com a condição: "Contains value column y" e a expressão:  "Index Y of".
 
 Condição adicionada ao plugin:
